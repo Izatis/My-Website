@@ -7,7 +7,6 @@ import GlowCard from "../components/GlowCard";
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const paragraphVariants = {
@@ -105,17 +104,17 @@ const Experience = () => {
   }, []);
 
   useEffect(() => {
-  const handleCopy = (e) => {
-    e.preventDefault();
-    e.clipboardData?.setData("text/plain", "Copying disabled.");
-  };
+    const handleCopy = (e) => {
+      e.preventDefault();
+      e.clipboardData?.setData("text/plain", "Copying disabled.");
+    };
 
-  document.addEventListener("copy", handleCopy);
+    document.addEventListener("copy", handleCopy);
 
-  return () => {
-    document.removeEventListener("copy", handleCopy);
-  };
-}, []);
+    return () => {
+      document.removeEventListener("copy", handleCopy);
+    };
+  }, []);
 
   return (
     <section
@@ -123,14 +122,12 @@ const Experience = () => {
       className="flex-center md:mt-40 mt-20 section-padding xl:px-0"
     >
       <div className="w-full h-full md:px-20 px-5">
-       
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-y-32 space-y-10">
             {expCards.map((card, index) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
-                  <GlowCard card={card}>
-                  </GlowCard>
+                  <GlowCard card={card}></GlowCard>
                 </div>
                 <div className="xl:w-4/6">
                   <div className="flex items-start">
@@ -148,16 +145,14 @@ const Experience = () => {
                           whileInView="visible"
                           viewport={{ once: false, amount: 0.2 }}
                         >
-                          
-                            <motion.li
-                              key={index}
-                              custom={index}
-                              variants={paragraphVariants}
-                              className="essay-item no-copy"
-                            >
-                              {card.paragraphs}
-                            </motion.li>
-                  
+                          <motion.li
+                            key={index}
+                            custom={index}
+                            variants={paragraphVariants}
+                            className="essay-item no-copy"
+                          >
+                            {card.paragraphs}
+                          </motion.li>
                         </motion.ul>
                       </section>
                     </div>
