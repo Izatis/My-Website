@@ -85,32 +85,29 @@ section {
 }
  */
 
-   /* .hero-3d-layout {
+  /* .hero-3d-layout {
     @apply xl:w-[70%] w-full h-full min-h-[50vh] absolute xl:-top-20 top-24 xl:-right-20 right-0;
   } */
- .hero-layout figure {
-  @apply w-full xl:w-1/2 flex justify-center;
-}
+  .hero-layout figure {
+    @apply w-full xl:w-1/2 flex justify-center;
+  }
 
-.hero-3d-layout {
-  @apply w-full h-[50vh] md:h-[60vh] xl:h-[70vh] relative;
-}
+  .hero-3d-layout {
+    @apply w-full h-[50vh] md:h-[60vh] xl:h-[70vh] relative;
+  }
 
-.hero-layout {
-  @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh]
+  .hero-layout {
+    @apply relative z-10 xl:mt-20 mt-32 md:h-dvh h-[80vh]
     flex flex-col xl:flex-row-reverse
     items-center justify-between
     gap-10 xl:gap-16 px-5 md:px-20;
-}
+  }
 
-
-.hero-layout > header {
-  @apply w-full xl:w-1/2
+  .hero-layout > header {
+    @apply w-full xl:w-1/2
     flex flex-col justify-center
     items-start text-left;
-}
-
-
+  }
 
   .hero-text {
     @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
@@ -125,7 +122,6 @@ section {
   .hero-badge {
     @apply bg-black-200 py-2 px-4 rounded-full w-fit text-sm md:text-base text-nowrap;
   }
-
 
   .navbar {
     @apply fixed w-full left-1/2 py-5 px-5 md:px-20 -translate-x-1/2 z-[100] transition-all duration-300 ease-in-out;
@@ -271,23 +267,20 @@ section {
     @apply absolute z-0 h-[110%] -top-10 w-14 md:w-28 bg-black;
   }
 
- .timeline-logo {
-  @apply md:size-20 size-12 flex-none rounded-full flex justify-center items-center 
+  .timeline-logo {
+    @apply md:size-20 size-12 flex-none rounded-full flex justify-center items-center 
          md:-translate-y-7 border border-black-50 bg-black-100;
 
-  
-  span {
-    font-size: clamp(1.6rem, 3vw, 2.6rem); 
-    line-height: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    span {
+      font-size: clamp(1.6rem, 3vw, 2.6rem);
+      line-height: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-    
-    text-shadow: 0 3px 8px rgba(0,0,0,0.35);
+      text-shadow: 0 3px 8px rgba(0, 0, 0, 0.35);
+    }
   }
-}
-
 
   .exp-card-wrapper {
     @apply flex flex-col-reverse xl:flex-row xl:gap-20 gap-10 justify-between;
@@ -513,13 +506,15 @@ section {
 @layer components {
   /* Контейнер секции */
   .essay-list {
-    @apply max-w-4xl mx-auto px-6 md:px-10 ;
+    @apply mx-auto;
+    margin-right: 50%;
   }
 
   /* Анимация при появлении */
   .essay-item {
-    @apply text-white-50 text-lg md:text-xl leading-relaxed font-light relative mb-10 pl-6;
+    @apply text-white-50  md:text-xl leading-relaxed font-light relative mb-10 pl-6;
     @apply transition-all duration-300 ease-out;
+    font-size: medium;
   }
 
   /* Красивая точка перед параграфом */
@@ -529,7 +524,6 @@ section {
     background: linear-gradient(90deg, #62e0ff 0%, #fd5c79 100%);
     box-shadow: 0 0 8px #62e0ff;
   }
-
 
   /* Тематический градиент для заголовка секции */
   .essay-title {
@@ -555,12 +549,11 @@ section {
   }
 }
 
-
 @layer components {
   /* Контейнер секции эссе */
- .essay-section {
-  @apply w-full px-6 md:px-10 py-20 text-white;
-}
+  .essay-section {
+    @apply w-full px-6 md:px-10 py-20 text-white;
+  }
 
   /* Стиль заголовка */
   .essay-title {
@@ -591,6 +584,6 @@ section {
 }
 
 .no-copy {
-  user-select: text;   
-  cursor: text;        
+  user-select: text;
+  cursor: text;
 }
